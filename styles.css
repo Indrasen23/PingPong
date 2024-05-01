@@ -1,0 +1,131 @@
+body::-webkit-scrollbar {
+    overflow: hidden;
+    display: none;
+}
+
+body {
+    margin: 0px;
+}
+
+#container {
+    background-image: url("https://wallpapercave.com/dwp1x/wp5838757.jpg"), url('GameBackground.jpg');
+    background-size: contain;
+    background-position: center;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#rod1 {
+    height: 5vh;
+    width: 17vw;
+    min-width: 100px;
+    /* background-color: #a41ec6; */
+    background-image: linear-gradient(to right, #900202, #5063dd);
+    border-radius: 2rem;
+    position: absolute;
+    top: 0px;
+    border: 3px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+#ball {
+    height: 3rem;
+    width: 3rem;
+    border-radius: 50%;
+    background-image: radial-gradient(#10c43d, rgb(99, 181, 211));
+    position: absolute;
+    border: 1px solid black;
+    top: 50%;
+    margin-top: -35px;
+}
+
+#rod2 {
+    height: 5vh;
+    width: 17vw;
+    min-width: 100px;
+    /* background-color: #a41ec6; */
+    background-image: linear-gradient(to right, #5063dd, #900202);
+    border-radius: 2rem;
+    position: absolute;
+    bottom: 0px;
+    border: 3px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+p {
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+/* ball moving transition code */
+.animate-top-right {
+    transition: transform linear 8s;
+    transform: translateX(2000px) translateY(-2000px);
+}
+
+.animate-bottom-right {
+    transition: transform linear 8s;
+    transform: translateX(2000px) translateY(2000px);
+}
+
+.animate-top-left {
+    transition: transform linear 8s;
+    transform: translateX(-2000px) translateY(-2000px);
+}
+
+.animate-bottom-left {
+    transition: transform linear 8s;
+    transform: translateX(-2000px) translateY(2000px);
+}
+
+
+@media screen and (max-width: 600px) {
+
+    /* Adjust ball size */
+    #ball {
+        height: 30px;
+        width: 30px;
+    }
+
+    /* Adjust rod size */
+    #rod1,
+    #rod2 {
+        height: 4%;
+        max-width: 150px;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+
+    /* ball moving transition code */
+    .animate-top-right {
+        transition: transform linear 7s;
+        transform: translateX(1000px) translateY(-2000px);
+    }
+
+    .animate-bottom-right {
+        transition: transform linear 7s;
+        transform: translateX(1000px) translateY(2000px);
+    }
+
+    .animate-top-left {
+        transition: transform linear 7s;
+        transform: translateX(-1000px) translateY(-2000px);
+    }
+
+    .animate-bottom-left {
+        transition: transform linear 7s;
+        transform: translateX(-1000px) translateY(2000px);
+    }
+}
